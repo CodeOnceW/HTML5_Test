@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-36.js"></script>
+    <style>
+        .father {
+            width: 300px;
+            height: 300px;
+            background-color: dodgerblue;
+            margin: 200px;
+            position: relative;
+        }
+        
+        .son {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="father">
+        <div class="son"></div>
+    </div>
+
+    <script>
+        $(function() {
+            // 1.获取设置距离稳定的位置（偏移） offset
+            console.log($(".son").offset());
+            console.log($(".son").offset().top);
+            console.log($(".son").offset().left);
+            // 修改
+            // $(".son").offset({
+            //     top: 300,
+            //     left: 300
+            // });
+
+            // 2， 获取距离带有定位父级位置（ 偏移） position 如果没有带有定位的父级，则以文档为准
+            // 这个方法只能获取不能设置
+            console.log($(".son").position());
+            console.log($(".son").position().top);
+            console.log($(".son").position().left);
+        })
+    </script>
+
+</body>
+
+</html>

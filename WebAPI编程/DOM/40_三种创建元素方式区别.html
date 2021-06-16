@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <button>点击</button>
+    <p>abc</p>
+    <div class="inner"></div>
+    <div class="create"></div>
+
+    <script>
+        // window.onload = function() {} 整个页面加载完才执行里面的内容
+        // 三种创建元素方式区别
+
+        // document.write 是直接将内容写入页面的内容流，但是文档流执行完毕，则他会导致页面全部重绘
+        // innerHTML 是将内容写入某个 DOM 节点，不会导致页面全部重绘
+        // innerHTML 创建多个元素效率更高（不要拼接字符串，采取数组形式拼接），结构稍微复杂
+        // createElement() 创建多个元素效率稍低一点点 但是结构更清晰
+        // 不同浏览器下 innerHTML 效率要高于 createElement
+
+        // 1. document.write() 创建元素  直接写入页面的内容流 但是文档流执行完毕 则他会导致页面全部重绘
+        // var btn = document.querySelector('button');
+        // // document.write('<div>123</div>');
+        // btn.onclick = function() {
+        //     document.write('<div>123</div>');
+        // }
+
+
+        // 2. innerHTML 创建元素
+        var inner = document.querySelector('.inner');
+        // for (var i = 0; i <= 100; i++) {
+        //     inner.innerHTML += '<a href="#">百度</a>';
+        // }
+        var arr = [];
+        for (var i = 0; i <= 100; i++) {
+            arr.push('<a href="#">百度</a>');
+        }
+        inner.innerHTML = arr.join('');
+
+
+
+        // 3. document.createElement() 创建元素
+        var create = document.querySelector('.create');
+        for (var i = 0; i <= 100; i++) {
+            var a = document.createElement('a');
+            create.appendChild(a);
+        }
+    </script>
+
+</body>
+
+</html>

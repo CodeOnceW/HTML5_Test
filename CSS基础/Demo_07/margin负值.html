@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: relative;
+            /* 浮动的盒子是紧贴在一起的 */
+            float: left;
+            width: 200px;
+            height: 300px;
+            border: 2px solid #ccc;
+            margin-left: -1px;
+            margin-top: -1px;
+        }
+        /* 鼠标经过div 的意思 div:hover */
+        div:hover {
+            /* 让当前鼠标经过的div升到最高处 */
+            /* 定位的盒子是最高层的 */
+            border: 2px solid orange;
+            /* 我们只要保证当前的盒子是定位 就可以压住标准流盒子 */
+            /* position: relative; */
+            /* 我们自能用相对定位 因为要保留原来的位置 */
+            /* 都是定位的盒子,我们通过z-index实现层级关系 */
+            z-index: 99;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    
+</body>
+</html>

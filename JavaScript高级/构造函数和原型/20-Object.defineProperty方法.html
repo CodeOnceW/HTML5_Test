@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // Object.defineProperties() 定义新属性或修改原有的属性
+        var obj = {
+            id: 1,
+            pname: '小米',
+            price: 1999
+        };
+
+        // 1. 以前的对象添加和修改属性的方式
+        // obj.num = 1000;
+        // obj.price = 999;
+        // console.log(obj);
+
+
+        // 2. Object.defineProperty(obj, prop, descriptor);
+        Object.defineProperty(obj, 'num', {
+            value: 1000,
+            enumerable: true
+        });
+        console.log(obj);
+
+        Object.defineProperty(obj, 'price', {
+            value: 999
+        });
+        console.log(obj);
+
+        Object.defineProperty(obj, 'id', {
+            // 如果值为false 不允许修改这个属性 默认值也是 false
+            writable: false
+
+            // writable: true
+        });
+        obj.id = 2;
+        console.log(obj);
+
+        Object.defineProperty(obj, 'address', {
+            value: '中国山东蓝翔技校XXX单元',
+            // 如果值为false 不允许修改这个属性 默认值也是 false
+            writable: false,
+            // enumerable 如果值为false则不允许遍历
+            enumerable: false,
+            // configurable 如果为false 则不允许删除这个属性 不允许修改第三个参数里面的特性 默认为false
+            configurable: false
+        });
+        console.log(obj);
+        console.log(Object.keys(obj));
+
+        delete obj.address;
+        console.log(obj);
+
+        delete obj.pname;
+        console.log(obj);
+
+        Object.defineProperty(obj, 'address', {
+            value: '中国山东蓝翔技校XXX单元',
+            // 如果值为false 不允许修改这个属性 默认值也是 false
+            writable: true,
+            // enumerable 如果值为false则不允许遍历
+            enumerable: true,
+            // configurable 如果为false 则不允许删除这个属性 默认为false
+            configurable: true
+        });
+        console.log(obj.address);
+    </script>
+
+</body>
+
+</html>

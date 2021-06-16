@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            /* 我们用CSS边框可以模拟三角效果 */
+            /* 1. 盒子 宽高 为 0 */
+            /* 2. 四个边框都要写, 只保留需要的边框颜色 */
+            /* 3. 为了照顾低版本浏览器 加上 font-size:0 ; line-height:0; */
+
+            width: 0;
+            height: 0;
+            border-top: 10px solid red;
+            border-right: 10px solid green;
+            border-bottom: 10px solid blue;
+            border-left: 10px solid yellow;
+        }
+
+        p {
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 10px;
+            border-color:  transparent transparent transparent red;
+            font-size: 0;
+            line-height: 0;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div></div>
+    <p></p>
+
+</body>
+</html>

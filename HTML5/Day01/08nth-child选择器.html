@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* n 可以是数字/关键字/公式 */
+        /* n 如果是数字,就是选择第几个 */
+        /* 常见的关键字有 even偶数 / odd奇数 */
+        /* 常见的公式如下 (如果n是公式, 则从0开始计算) */
+        /* 但是,第0各元素或则超出了元素的个数会被忽略 */
+        
+        ul li:nth-child(even) {
+            /* 选择所有偶数元素 even */
+            background-color: green;
+        }
+        
+        ul li:nth-child(odd) {
+            /* 选择所有奇数元素 odd */
+            background-color: red;
+        }
+        
+        ul li:nth-child(n) {
+            /* 里面写n,默认从0开始 */
+            /* 选中所有 */
+            background-color: blue;
+        }
+        
+        ul li:nth-child(3n) {
+            /* 3n 选择 3 6 9 ... */
+            /* n + N 就是从第N个开始到最后一个 */
+            /* -n + N 就是选择前N个 */
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+    </ul>
+
+</body>
+
+</html>

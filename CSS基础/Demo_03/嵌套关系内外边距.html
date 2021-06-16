@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .father {
+            width: 500px;
+            height: 500px;
+            background-color: pink;
+
+            /* 嵌套关系 垂直外边距合并 解决方案 */
+            /* 1.可以为父元素轻易上边距 transparent 透明 */
+            /* border: 1px solid transparent; */
+            /* 2.可以给父级指定一个 上padding值 */
+            /* padding-top: 1px; */
+        }
+
+        .son {
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+            margin-top: 100px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="father">
+        <div class="son"></div>
+    </div>
+
+</body>
+
+</html>

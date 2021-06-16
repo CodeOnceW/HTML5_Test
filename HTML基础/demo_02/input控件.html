@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单</title>
+</head>
+<body>
+    
+    <!-- input标签 -->
+
+    <!-- 1.type属性决定输入框类型 -->
+    <!-- 2.value属性决定输入框内文字 -->
+    <!-- 3.name属性用来区别表单,后台可以通过name属性区别 -->
+
+    <!-- type text 是一个文本框 -->
+    <br>用户名: 
+        <input type="text" value="请输入用户名">
+
+    <br>昵称: 
+        <input type="text" value="请输入昵称">
+
+    <!-- type password 是一个密码框 -->
+    <br>密码: 
+        <input type="password">
+
+    <br>性别: 
+        <!-- radio单选框 -->
+        <!-- checked属性标识默认选中 -->
+        男<input type="radio" name ="sex">
+        女<input type="radio" name ="sex">
+        未知<input type="radio" name ="sex" checked="checked">
+
+    <br>爱好:
+        <!-- checkbox复选按钮框 -->
+        睡觉<input type="checkbox" name="hobby" checked="checked">
+        篮球<input type="checkbox" name="hobby">
+        爬山<input type="checkbox" name="hobby">
+        唱歌<input type="checkbox" name="hobby">
+        <br>
+
+        <!-- 普通按钮 -->
+        <input type="button" value="普通按钮">
+        <!-- 提交按钮 -->
+        <input type="submit" value="提交按钮">
+        <!-- 重置按钮 -->
+        <input type="reset" value="重置按钮"> 
+        <!-- 图片按钮 里面必须包含src属性-->
+        <input type="image" src="./images/btn.png">
+
+        <br>
+        <!-- 文件域 上传文件用的 -->
+        <input type="file">
+
+
+</body>
+</html>

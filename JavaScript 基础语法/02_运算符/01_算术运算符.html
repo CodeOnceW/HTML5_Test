@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // + - * /
+        console.log(1 + 1); //2
+        console.log(1 - 1); //0
+        console.log(1 * 1); //1
+        console.log(1 / 1); //1
+
+        // 1. % 取余（取模）
+        console.log(4 % 2); //0
+        console.log(5 % 3); //2
+        console.log(3 % 5); //3
+
+        // 2. 浮点数在算数运算里面会有问题
+        console.log(0.1 + 0.2); //0.30000000000000004
+        console.log(0.07 * 100); //7.000000000000001
+        // 浮点数的最高精度是17为小数，但在进行算数计算时期精确度远远不如整数
+        // 避免直接使用小数进行算数运算
+
+        // 3. 我们不能直接拿着浮点数来进行比较 是否相等
+        var num = 0.1 + 0.2;
+        console.log(num == 0.3); //false
+
+        // 一个数的余数是0就说明这个数能被整除，这就是 % 取余运算符的主要用途
+        // 算数运算符有优先级 先乘除后加减 有括号先算括号
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

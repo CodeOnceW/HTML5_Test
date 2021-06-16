@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 查找字符串"abcoefoxyozzopp"中所有o出现的位置以及次数
+        var str = 'abcoefoxyozzopp';
+        // var str = ['red', 'blue', 'red', 'green', 'pink', 'red'].join('');
+        var index = str.indexOf('o');
+        // var index = str.indexOf('red');
+        var num = 0;
+
+        // console.log(index);
+
+        while (index !== -1) {
+            console.log(index); // 输出o的位置
+            num++; // 统计o出现次数
+            index = str.indexOf('o', index + 1); // 从当前o后面一位开始查找
+            // index = str.indexOf('red', index + 1); // 从当前red后面一位开始查找
+        }
+        console.log('o出现的次数是：' + num);
+
+        // 数组 ['red', 'blue', 'red', 'green', 'pink', 'red'] ,求red出现的位置和次数
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

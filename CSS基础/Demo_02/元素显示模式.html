@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .sp {
+            /* 行内元素转换为块级元素 */
+            display: block;
+            width: 200px;
+            height: 200px;
+            background-color: #777;
+        }
+
+        .dv {
+            /* 块级元素转换成行内元素 */
+            display: inline;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+
+        a {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: blue;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <span class="sp">H</span>
+
+    <div class="dv">H</div>
+    <div class="dv">H</div>
+
+    <a href="#">Hello</a>
+    <a href="#">World</a>
+
+
+
+</body>
+
+</html>

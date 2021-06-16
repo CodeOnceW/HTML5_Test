@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* transform: translateX();在X轴上移动 */
+        /* transform: translateY();在Y轴上移动 */
+        /* transform: translateZ();在Z轴上移动(一般用px单位) */
+        /* transform: translate3d(x, y, z);其中x/y/z分别值要移动的轴的方向距离 */
+        
+        body {
+            /* 透视写道被观察元素的父盒子上面 */
+            perspective: 400px;
+        }
+        
+        div {
+            width: 200px;
+            height: 200px;
+            margin: 50px auto;
+            background-color: #4a90de;
+            /* X 100px Y 100px */
+            /* transform: translateX(100px) translateY(100px) translateZ(100px); */
+            /* 1.translateZ 沿着Z轴移动 */
+            /* 2.translateZ 后面单位一般跟px */
+            /* 3.translateZ(100px) 向外移动100px */
+            /* 4.3D移动有简写的方法 */
+            transform: translate3d(100px, 100px, 100px);
+            /* 5.X, Y, Z是不能省略的,如果没有就写0 */
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+</body>
+
+</html>

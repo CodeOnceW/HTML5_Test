@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>淘宝轮播图</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .toabo {
+            /* 子绝父相 */
+            position: relative;
+            width: 520px;
+            height: 280px;
+            background-color: pink;
+            margin: 100px auto;
+        }
+
+        /* 并集选择器集体声明 */
+        .btn-l,
+        .btn-r {
+            /* 只能用绝对定位来做,才能压住盒子 */
+            /* 不要占有位置,随便移动位置,必须用绝对定位 */
+            position: absolute;
+            top: 50%;
+            /* 绝对定位的盒子不需要转换,可以直接转宽高 */
+            margin-top: -15px;
+            width: 30px;
+            height: 40px;
+            /* 文字垂直居中 */
+            line-height: 40px;
+            background: rgba(0, 0, 0, .2);
+            text-decoration: none;
+            color: #fff;
+            text-align: center;
+        }
+
+        .btn-l {
+            left: 0;
+            /* 圆角盒子 */
+            /* 简写  左上 右上 右下 左下 */
+            border-radius: 0 50% 50% 0;
+        }
+
+        .btn-r {
+            right: 0;
+            /* 圆角盒子 */
+            border-top-left-radius: 50%;
+            border-bottom-left-radius: 50%;
+        }
+
+        /* 鼠标经过样式 */
+        .btn-l:hover,
+        .btn-r:hover {
+            background: rgba(0, 0, 0, .4);
+        }
+
+        .circle {
+            position: absolute;
+            left: 50%;
+            margin-left: -35px;
+            bottom: 10px;
+            width: 70px;
+            height: 13px;
+            background-color: rgba(255, 255, 255, .4);
+            border-radius: 7px;
+        }
+
+        .circle li {
+            float: left;
+            width: 8px;
+            height: 8px;
+            margin: 3px;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+        /* 此处一定要注意优先级的问题 */
+        .circle .current {
+            background-color: #f50000;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="toabo">
+        <!-- 左按钮 -->
+        <a href="#" class="btn-l"> &lt; </a>
+        <!-- 右按钮 -->
+        <a href="#" class="btn-r"> &gt; </a>
+        <!-- 图片 -->
+        <img src="./images/taobao.jpg" alt="">
+        <!-- 小圆点 -->
+        <ul class="circle">
+            <li></li>
+            <li></li>
+            <li class="current"></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</body>
+
+</html>

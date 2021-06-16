@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- 网页编码格式 -->
+    <meta charset="UTF-8">
+    <!-- 要求当前网页使用IE浏览器最高版本的内核来渲染 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 视口的设置：视口的宽度和设备一致，默认的缩放比例和PC段一致，用户不能自行缩放 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--[if lt IE 9]>
+        <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+    <!-- 解决ID9一下浏览器对html5新增标签的不是吧，并导致CSS不起作用的问题 -->
+    <!-- 解决IE9一下浏览器对CSS3Media Query的不识别 -->
+    <!-- 一定不用忘记引入bootstrap的样式文件 -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+        .row div {
+            height: 50px;
+            background-color: #4a90de;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">左侧</div>
+            <!-- 偏移的份数就是 12 - 两个盒子的份数  -->
+            <div class="col-md-4 col-md-offset-4">右侧</div>
+        </div>
+
+        <div class="row">
+            <!-- 如果只有一个盒子 那么就偏移 = （12 - 本身份数） / 2 -->
+            <div class="col-md-6 col-md-offset-3">中间盒子</div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

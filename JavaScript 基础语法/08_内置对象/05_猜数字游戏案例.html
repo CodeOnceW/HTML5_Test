@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 猜数字游戏
+        // 1.随机生成一个1~100 的整数 我们需要用到 Math.random() 方法
+        // 2.需要一直猜到正确为止 所有需要一直循环
+        // 3.while 循环更简单 机会只有10次
+        // 4.核心算法：使用 if else if 多分支语句来判断大于、小于、等于
+
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        var random = getRandomInt(1, 100);
+        var sum = 0;
+
+        while (sum < 10) { // 死循环
+            var num = prompt('你来猜？输入1~100之间的一个数字:');
+            if (num > random) {
+                alert('你猜大了！');
+                sum++;
+            } else if (num < random) {
+                alert('你猜小了！');
+                sum++;
+            } else {
+                alert('恭喜你！你猜对了！');
+                break; // 退出整个循环程序来结束程序
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
