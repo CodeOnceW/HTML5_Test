@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // find 方法 在数组中查找第一个满足条件的值 
+        // 如果找到返回该对象 没有找到返回 undefined
+
+        var arr = [{
+            id: 1,
+            uname: '张三'
+        }, {
+            id: 2,
+            uname: '李四'
+        }];
+
+        var target = arr.find(item => item.id == 2);
+        // var target = arr.find(item => item.id == 3); // undefined
+        console.log(target);
+    </script>
+
+</body>
+
+</html>
