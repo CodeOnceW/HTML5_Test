@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var age = 100;
+
+        var obj = {
+            age: 20,
+            say: () => {
+                // 箭头函数没有this指向 所以指向的是window
+                console.log(this);
+                // 由于指向的是window对象 所以输出的是 window 下面的 全局变量 age
+                console.log(this.age);
+            }
+        }
+
+        obj.say();
+    </script>
+
+</body>
+
+</html>

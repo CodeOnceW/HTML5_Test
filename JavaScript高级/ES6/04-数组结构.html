@@ -12,13 +12,17 @@
 
     <script>
         // 数组结构允许我们按照一一对应的关系从数组中提取值 然会将值赋值给变量
+        // 如果这个变量没有对应的值 那么这个变量的值就为 undefined
 
         let arr = [1, 2, 3];
-        let [a, b, c] = arr;
+        // let [a, b, c] = arr;
+        let [a, b, c, d, e] = arr;
         console.log(arr);
         console.log(a);
         console.log(b);
         console.log(c);
+        console.log(d); //undefined
+        console.log(e); //undefined
     </script>
 
 </body>

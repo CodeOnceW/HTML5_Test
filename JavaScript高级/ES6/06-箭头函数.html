@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // 箭头函数是用来简化函数定义语法的
+        // 箭头函数  () => {}
+        // 函数体中只有一句代码且返回结果就是返回值 可以省略大括号
+        // 如果形参只有一个 形参外面的小括号也可以省略
+        // 如果在箭头函数中使用 this this关键字将指向箭头函数定义位置中的this
+
+        const fn = () => {
+            console.log(123);
+        }
+        fn();
+
+        // function sum(num1, num2) {
+        //     return num1 + num2;
+        // }
+        const sum = (num1, num2) => num1 + num2;
+        const result = sum(10, 30);
+        console.log(result);
+
+        const fun = v => {
+            console.log(v);
+        }
+        fun(22);
+
+        const print = n => n + ' World';
+        console.log(print('Hello'));
+
+        console.log('---------------------');
+
+        const obj = {
+            name: '张三'
+        };
+
+        function say() {
+            console.log(this);
+            return () => {
+                console.log(this);
+            }
+        }
+        const resFn = say.call(obj);
+        resFn();
+    </script>
+
+</body>
+
+</html>
