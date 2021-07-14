@@ -7,10 +7,17 @@ const path = require('path');
 
 // 引入 body-parser 模块 用来处理 post 请求参数
 const bodyPaser = require('body-parser');
+
+// 导入 express-session 模块
+const session = require('express-session');
+
 // 数据库连接
 require('./model/connect');
 // 处理 post 请求参数
 app.use(bodyPaser.urlencoded({ extended: false }));
+
+// 配置 session 
+app.use(session({ secret: 'secret key' }));
 
 // 告诉 express 框架模板所在的位置
 app.set('views', path.join(__dirname, 'views'));
@@ -28,11 +35,19 @@ const admin = require('./route/admin');
 // 开放静态资源文件
 app.use(express.static(path.join(__dirname, 'public')));
 
+// 拦截请求 判断用户登录状态
+app.use('/admin', require('./middleware/loginGuard'));
 
 // 为路由匹配请求路径
 app.use('/home', home);
 app.use('/admin', admin);
 
+app.use((err, req, res, next) => {
+    // 将字符串对象转换为对象类型
+    // JSON.parse() 将自负床对象转换成对象类型
+    const result = JSON.parse(err);
+    res.redirect(`${result.path}?message=${result.message}`);
+})
 
 // 监听端口
 app.listen(80);
