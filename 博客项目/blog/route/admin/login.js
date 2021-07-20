@@ -24,7 +24,7 @@ module.exports = async(req, res) => {
         // false 比对失败
         let isValid = await bcrypt.compare(password, user.password)
             // 如果密码比对成功
-        if (password == user.password) {
+        if (isValid) {
             // 登录成功
             // 将用户名存储在请求对象中
             req.session.username = user.username;

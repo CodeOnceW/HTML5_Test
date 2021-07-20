@@ -8,7 +8,7 @@ module.exports = async(req, res, next) => {
 
     try {
         await validateUser(req.body);
-    } catch (ex) {
+    } catch (e) {
         // 验证没有通过
         // e.message
         // 重定向回用户添加页面
@@ -29,7 +29,7 @@ module.exports = async(req, res, next) => {
     }
     // 对密码进行加密处理
     // 生成随机字符串
-    const salt = await bcrypt.genSync(10);
+    const salt = await bcrypt.genSalt(10);
     // 加密
     const password = await bcrypt.hash(req.body.password, salt);
     // 替换密码
