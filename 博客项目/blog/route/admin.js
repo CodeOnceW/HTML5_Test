@@ -11,18 +11,19 @@ admin.get('/login', require('./admin/loginPage'));
 admin.post('/login', require('./admin/login'));
 
 // 创建用户列表路由
-admin.get('/user', require('./admin/userPage'))
+admin.get('/user', require('./admin/userPage'));
 
 // 实现退出功能
-admin.get('/logout', require('./admin/loginout'))
+admin.get('/logout', require('./admin/loginout'));
 
 // 创建用户编辑页面路由
-admin.get('/user-edit', require('./admin/user-edit'))
+admin.get('/user-edit', require('./admin/user-edit'));
 
 // 创建实现用户添加功能路由
-admin.post('/user-edit', require('./admin/user-edit-fn'))
+admin.post('/user-edit', require('./admin/user-edit-fn'));
 
-admin.post('/user-modify', require('./admin/user-modify'))
+// 创建实现用户修改功能路由
+admin.post('/user-modify', require('./admin/user-modify'));
 
 // 将路由对象作为模块成员进行导出
 module.exports = admin;

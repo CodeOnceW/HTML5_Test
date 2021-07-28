@@ -4,10 +4,8 @@ const express = require('express');
 const app = express();
 // 导入 path 模块
 const path = require('path');
-
 // 引入 body-parser 模块 用来处理 post 请求参数
 const bodyPaser = require('body-parser');
-
 // 导入 express-session 模块
 const session = require('express-session');
 
@@ -44,9 +42,16 @@ app.use('/admin', admin);
 
 app.use((err, req, res, next) => {
     // 将字符串对象转换为对象类型
-    // JSON.parse() 将自负床对象转换成对象类型
+    // JSON.parse() 
     const result = JSON.parse(err);
-    res.redirect(`${result.path}?message=${result.message}`);
+    // {path: '/admin/user-edit', message: '密码比对失败,不能进行用户信息的修改', id: id}
+    let params = [];
+    for (let attr in result) {
+        if (attr != 'path') {
+            params.push(attr + '=' + result[attr]);
+        }
+    }
+    res.redirect(`${result.path}?${params.join('&')}`);
 })
 
 // 监听端口
