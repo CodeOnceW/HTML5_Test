@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        var arrarLike = {
+            "0": "张三",
+            "1": "李四",
+            "2": "王五",
+            "length": 3
+        }
+
+        console.log(arrarLike);
+        var arr = Array.from(arrarLike);
+        console.log(arr);
+
+        var arrlike = {
+            "0": "1",
+            "1": "2",
+            "length": 2
+        };
+
+        var arr = Array.from(arrlike, item => item * 2);
+        console.log(arr);
+    </script>
+
+</body>
+
+</html>

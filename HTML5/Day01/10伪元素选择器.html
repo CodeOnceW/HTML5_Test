@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            height: 300px;
+            border: 1px solid #000;
+        }
+        /* before和after必须有content属性 */
+        /* before在内容前面 after在内容后面 */
+        /* before和after创建一个元素，但是属于行内元素 */
+        /* 伪元素权重为1 */
+        
+        div::before {
+            /* 伪元素选择器  before 在元素的前面插入内容 */
+            content: "Hello";
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        
+        div::after {
+            /* 伪元素选择器  after 在元素的后面插入内容 */
+            content: "HTML";
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        World
+    </div>
+
+</body>
+
+</html>

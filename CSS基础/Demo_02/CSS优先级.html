@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        div {
+            /* i !important优先级最高 */
+            color: red !important;
+        }
+
+        div {
+            /* 选择器相同执行层叠性 */
+            color: blue;
+        }
+
+        .one {
+            /* 选择器不同,执行优先级 */
+            color: brown;
+        }
+
+        #two {
+            /* id选择器大于类选择器 */
+            color: green;
+        }
+
+        /* style 行内样式,优先级最高 */
+        /* important 在样式属性的后面添加 优先级无穷大 */
+
+    </style>
+</head>
+<body>
+    <div class="one" id="two" style="color:yellow">
+        敌军还有5秒到达战场
+    </div>
+</body>
+</html>

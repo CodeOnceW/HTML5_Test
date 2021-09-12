@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            border: 1px solid red;
+        }
+        div img {
+            /* 默认情况下，图片在盒子内会有一条白边 */
+            /* 因为图片默认和文字 基线 对齐 */
+            /* vertical-align: bottom; */
+            /* 第一种解决方案是设置vertical-align 属性不是基线对齐  最合适 */
+            vertical-align: middle; 
+            /* 第二种解决方案是把图片转换为块级元素 */
+            /* 因为vertical-align 对块级元素无效 */
+            /* display: block; */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <img src="./images/3.jpg" alt="">
+    </div>
+
+</body>
+
+</html>

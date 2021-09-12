@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #4a90ed;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box"></div>
+
+    <script>
+        // offset 与 style 的区别
+        // 我们想获取元素大写位置 用 offset 更合适
+        // 我们想要给元素更改属性值 需要用到 style
+
+        var box = document.querySelector('.box');
+
+        console.log(box.offsetWidth); // offset可以获取元素所有属性
+        console.log(box.style.width); // style只能获取行内样式属性
+
+        // box.offsetWidth = '300px';  // offset只读 不能赋值
+        box.style.width = '300px'; // style可以读 可以赋值
+    </script>
+
+</body>
+
+</html>

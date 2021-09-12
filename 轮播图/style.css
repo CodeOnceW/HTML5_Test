@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+    background-color: #2a2139;
+}
+
+.focus {
+    /* 父盒子相对定位 */
+    overflow: hidden;
+    position: relative;
+    width: 500px;
+    height: 280px;
+    margin: 200px auto;
+    box-shadow: 0 0 10px #555;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+}
+
+.focus ul {
+    /* 图片列表绝对定位 */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 800%;
+}
+
+.focus ul li {
+    /* 里面的图片左浮动 贴在一起 */
+    float: left;
+}
+
+.focus ul img {
+    /* 设置图片的宽高 */
+    width: 500px;
+    height: auto;
+}
+
+.arrow-l,
+.arrow-r {
+    z-index: 99;
+    /* 默认状态下是隐藏状态 鼠标上移显示 */
+    display: none;
+    /* 小箭头绝对定位 */
+    position: absolute;
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    padding: 20px 0;
+    background: rgba(0, 0, 0, .5);
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.arrow-l {
+    left: 0;
+    border-radius: 0 20px 20px 0;
+    -webkit-border-radius: 0 20px 20px 0;
+}
+
+.arrow-r {
+    right: 0;
+    border-radius: 20px 0 0 20px;
+    -webkit-border-radius: 20px 0 0 20px;
+}
+
+.arrow-r img,
+.arrow-l img {
+    /* 可以用图标字体代替图片  */
+    width: 30px;
+}
+
+.circle {
+    z-index: 99;
+    /* 底部小圆点用绝对定位 */
+    position: absolute;
+    bottom: 10px;
+    /* 设置底部居中 */
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+}
+
+.circle li {
+    /* 小圆点使用浮动 用margin值隔开 */
+    float: left;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 3px;
+    border: 3px solid rgba(255, 255, 255, .5);
+    -webkit-border-radius: 50%;
+    cursor: pointer;
+}
+
+.current {
+    /* 小圆点获得样式 */
+    background-color: #fff;
+    box-shadow: 0 0 5px #fff;
+}

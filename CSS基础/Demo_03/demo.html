@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS高级常见技巧汇总</title>
+    <style type="text/css">
+        input::-webkit-input-placeholder {
+            /* Chrome/Opera/Safari */
+            color: red;
+        }
+
+        input::-moz-placeholder {
+            /* Firefox 19+ */
+            color: red;
+        }
+
+        input:-ms-input-placeholder {
+            /* IE 10+ */
+            color: red;
+        }
+
+        input:-moz-placeholder {
+            /* Firefox 18- */
+            color: red;
+        }
+
+        input:focus {
+            background-color: skyblue;
+        }
+
+        input {
+            border: none;
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" placeholder="请设置用户名">
+</body>
+
+</html>

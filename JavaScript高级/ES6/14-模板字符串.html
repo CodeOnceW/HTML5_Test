@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // 模板字符串
+        // 模板字符串可以解析变量
+        // 模板字符串可以换行
+        // 模板字符串中可以调用函数
+
+        // 声明一个模板字符串
+        var uname = `张三`;
+        var sayHello = `Hello, 我是${uname}`;
+        console.log(uname);
+        console.log(sayHello);
+
+        // 模板字符串可以换行
+        let result = {
+            uname: "张三",
+            age: 20,
+            sex: "男"
+        }
+
+        let html = `<div>
+            <span>${result.uname}</span>
+            <span>${result.age}</span>
+            <span>${result.sex}</span>
+            </div>`;
+
+        console.log(html);
+
+        // 模板字符串中可以调用函数
+        const sayHi = function() {
+            return "Hello, World!";
+        };
+        let greet = `${sayHi()} Hi,JavaScript`;
+        console.log(greet);
+    </script>
+
+</body>
+
+</html>

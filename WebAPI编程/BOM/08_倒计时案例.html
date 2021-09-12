@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .seckill-countdown {
+            display: block;
+            width: 190px;
+            height: 260px;
+            color: #fff;
+            margin: 200px auto;
+            padding: 30px;
+            box-shadow: 0 0 3px #000;
+            background: #e83632 url(images/redbg.png) no-repeat 50%;
+        }
+        
+        .seckill-countdown .title {
+            text-align: center;
+            font-size: 30px;
+            font-weight: 700;
+        }
+        
+        .smtit {
+            margin: 100px auto 10px;
+            font-size: 14px;
+        }
+        
+        .smtit b {
+            font-size: 18px;
+        }
+        
+        .timer {
+            font-weight: 900;
+        }
+        
+        .seckill-countdown span {
+            display: inline-block;
+            width: 33px;
+            height: 33px;
+            text-align: center;
+            line-height: 33px;
+            background-color: #2f3430;
+            text-shadow: 0px 0px 2px #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="seckill-countdown">
+        <p class="title">京东秒杀</p>
+        <p class="smtit">
+            <b>20:00</b> 点场 距结束
+        </p>
+        <p class="timer">
+            <span class="hour">00</span> :
+            <span class="minute">00</span> :
+            <span class="second">00</span>
+        </p>
+    </div>
+
+    <script>
+        // 1. 获取元素
+        var hour = document.querySelector('.hour'); // 获取小时
+        var minute = document.querySelector('.minute'); // 获取分钟
+        var second = document.querySelector('.second'); // 获取秒数
+
+        var inputTime = +new Date('2021-05-16 20:00:00'); // 返回用户输入时间的总毫秒数
+
+        // 我们先调用一次这个函数 防止第一次刷新页面有空白
+        countDown();
+        // 2. 开启定时器
+        setInterval(countDown, 1000);
+
+        function countDown() {
+            var nowTime = +new Date(); // 返回当前事件总的毫秒数
+            var times = (inputTime - nowTime) / 1000; // times 是剩余时间的总毫秒数
+
+            var h = parseInt(times / 60 / 60 % 24); // 小时
+            h = h < 10 ? '0' + h : h;
+            hour.innerHTML = h; // 把剩余的小时给 小时盒子
+
+            var m = parseInt(times / 60 % 60); // 分钟
+            m = m < 10 ? '0' + m : m;
+            minute.innerHTML = m; // 把剩余的分钟给 分钟盒子
+
+            var s = parseInt(times % 60); // 秒数
+            s = s < 10 ? '0' + s : s;
+            second.innerHTML = s; // 把秒数的小时给 秒数盒子
+        }
+    </script>
+
+</body>
+
+</html>

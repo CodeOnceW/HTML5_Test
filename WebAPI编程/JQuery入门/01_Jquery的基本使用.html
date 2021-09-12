@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 引入Jquery文件 -->
+    <script src="jquery-36.js"></script>
+
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: dodgerblue;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <script>
+        // $('div').hide();
+
+        // 1.等着页面DOM加载完毕再去执行JS代码
+        // $(document).ready(function() {
+        //     $('div').hide();
+        // })
+
+        // 2.
+        $(function() {
+            $('div').hide();
+        })
+    </script>
+
+    <div></div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            /* relative 保留原来的位置,不影响 */
+            /* position: relative; */
+            /* 绝对定位 margin 左右 auto 不能让其水平居中 */
+            position: absolute;
+            top: 0;
+            /* 往右走父级盒子宽度的一半 */
+            left: 50%;
+            /* 再往回走自身宽度的一半 */
+            margin-left: -100px;
+
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* 标准流中 margin 左右 auto 就可以让盒子水平居中 */
+        }
+
+        .w {
+            top: 50%;
+            left: 0;
+            margin-top: -100px;
+            margin-left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box"></div>
+
+    <div class="box w"></div>
+</body>
+
+</html>

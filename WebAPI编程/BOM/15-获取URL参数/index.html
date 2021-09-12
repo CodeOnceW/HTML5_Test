@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        .nav {
+            width: 80%;
+            height: 60px;
+            margin: 0 auto;
+            background-color: #4a90ed;
+        }
+        
+        .nav h1 {
+            line-height: 60px;
+            color: #fff;
+            text-align: center;
+        }
+        
+        section {
+            width: 80%;
+            height: 1000px;
+            margin: 0 auto;
+            background-color: #b5ea7b;
+        }
+        
+        section h2 {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="nav">
+        <h1>首页</h1>
+    </div>
+
+    <section>
+        <h2>欢迎你：</h2>
+    </section>
+
+    <script>
+        console.log(location.search);
+
+        // 1.先去掉问号 substr('起始位置', 截取几个字符)
+        var params = location.search.substr(1); // 从问好后一个数开始截取
+        console.log(params);
+        // 2.利用等号 = 把字符串分隔为数组 split
+        var arr = params.split('=');
+        // console.log(arr);
+        console.log(arr[1]);
+
+        var titile = document.querySelector('h2');
+        titile.innerHTML = '<h2>欢迎你：' + arr[1] + '</h2>';
+    </script>
+
+</body>
+
+</html>

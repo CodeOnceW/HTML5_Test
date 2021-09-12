@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- controls 显示控件 -->
+    <!-- autoplay 自动播放 -->
+    <!-- 谷歌禁用了autoplay功能 -->
+    <!-- loop 是否循环播放 -->
+    <!-- src 音频位置 -->
+    <audio src="./media/snow.mp3" controls="controls" autoplay="autoplay" loop="loop"></audio>
+    <!-- 因为不同浏览器支持不同格式,我们采取的方案是 -->
+    <!-- 我们为这个音频准备多种格式 -->
+
+    <audio controls="controls">
+        <source src="./media/snow.mp3" type="audio/mpeg">
+        <source src="./media/snow.ogg" type="audio/ogg">
+        <!-- 当所有格式都不支持,则提示 -->
+        您的浏览器版本过低,不支持音频播放
+    </audio>
+
+
+</body>
+
+</html>

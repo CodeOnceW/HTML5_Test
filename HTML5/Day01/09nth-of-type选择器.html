@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div :nth-child(1) {
+            background-color: red;
+        }
+        
+        div :nth-child(2) {
+            background-color: green;
+        }
+        
+        div span:nth-child(1) {
+            /* 无法选取到任何元素 */
+            background-color: blue;
+        }
+        
+        div span:nth-child(2) {
+            background-color: #ccc;
+        }
+        /* 总结： :nth-child(n) 选择父元素了吗的第n个孩子，不管里面的孩子是否是同一类型 */
+        /* nth-of-type() */
+        
+        div span:first-of-type {
+            /* 选择div里面的第一个span */
+            background-color: yellow;
+        }
+        
+        div span:last-of-type {
+            /* 选择div里面的最后一个span */
+            background-color: skyblue;
+        }
+        
+        div span:nth-of-type(2) {
+            /* 选择div里面的第2个span */
+            background-color: purple;
+        }
+        
+        ul li:nth-of-type(2) {
+            /* 权重10 */
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <p>P标签</p>
+        <span>span标签</span>
+        <span>span标签</span>
+        <span>span标签</span>
+    </div>
+
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+</body>
+
+</html>

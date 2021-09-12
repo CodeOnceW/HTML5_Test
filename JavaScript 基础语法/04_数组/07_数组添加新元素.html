@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 新增数组元素
+        var arr = ['red', 'green', 'blue'];
+
+        // 通过修改 length 长度新增数组元素
+        console.log(arr.length);
+        arr.length = 5; // 把我们数组的长度修改成了5
+        console.log(arr);
+        console.log(arr[3]); // undefined 索引没有给值 就是声明变量未给值 默认值就是 undefined
+        console.log(arr[4]); // undefined
+
+        //通过修改数组索引新增数组元素 追加数组元素
+        var arr1 = ['red', 'green', 'blue'];
+        arr1[3] = 'pink';
+        console.log(arr1);
+        arr1[4] = 'yellow';
+        console.log(arr1);
+        arr1[1] = 'hotpink'; // 这里是替换原来数组元素
+
+        arr1[arr1.length] = 'Hello';
+        console.log(arr1);
+
+        arr1 = '有点意思';
+        console.log(arr1); // 不要直接给数组名赋值  否则会覆盖掉以前的数据
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

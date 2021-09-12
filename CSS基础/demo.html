@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 获取标签
+        var box = document.getElementById("box");
+        var arrs = [];
+        // 循环创建16个对象，添加到数组中
+        for (var i = 0; i < 4; i++) {
+            for (var j = 0; j < 4; j++) {
+                var divNode = document.createElement("div")
+                divNode.style.top = 200 * i + "px"
+                divNode.style.left = 200 * j + "px"
+
+                // 创建对象
+                var pox = {
+                    left: 200 * i,
+                    top: 200 * j,
+                }
+                // 创建好的对象添加到数组里
+                if (i !== 3 || j !== 3) {
+                    arrs.push(pox)
+                } else {
+                    divNode.style.background = "none";
+                    divNode.className = "space"
+                }
+                box.appendChild(divNode)
+            }
+        }
+        console.log(arrs);
+
+        // 随机抽取对象
+        for (var i = 0; i < 15; i++) {
+            var ranNum = parseInt(Math.random() * (15 - i))
+            var x = arrs[ranNum].left;
+            var y = arrs[ranNum].top;
+
+            box.children[i].style.backgroundPosition = -x + "px " + -y + "px";
+            arrs.splice(ranNum, 1);
+        }
+
+        // 键盘事件
+        document.onkeyup = function (event) {
+            // 得到按的那个键
+            var key = event.keyCode
+            // 上
+            if (key == 38) {
+
+                var x = box.querySelector(".space").style.left
+                var y = box.querySelector(".space").style.top
+                for (var i = 0; i < 16; i++) {
+                    if (parseInt(box.children[i].style.top) == parseInt(y) - 200 && parseInt(box.children[i].style
+                            .left) == parseInt(x)) {
+                        box.children[i].style.top = y
+                        box.querySelector(".space").style.top = parseInt(y) - 200 + "px"
+                    }
+                }
+
+                // 下
+            } else if (key == 40) {
+
+                var x = box.querySelector(".space").style.left
+                var y = box.querySelector(".space").style.top
+
+                // 遍历所有小div，找到空白上面得那张 赋值 为y
+                for (var i = 0; i < 16; i++) {
+                    if (parseInt(box.children[i].style.top) == parseInt(y) + 200 && parseInt(box.children[i].style
+                            .left) == parseInt(x)) {
+                        box.children[i].style.top = y
+                        box.querySelector(".space").style.top = parseInt(y) + 200 + "px"
+                    }
+                }
+
+                // 左
+            } else if (key = 38) {
+                var x = box.querySelector(".space").style.left
+                var y = box.querySelector(".space").style.top
+                for (var i = 0; i < 16; i++) {
+                    if (parseInt(box.children[i].style.left) == parseInt(x) - 200 && parseInt(box.children[i].style
+                            .top) == parseInt(y)) {
+                        box.children[i].style.left = x
+                        box.querySelector(".space").style.left = parseInt(x) - 200 + "px"
+                    }
+                }
+
+
+                // 右 
+            } else if (key = 39) {
+                var x = box.querySelector(".space").style.left
+                var y = box.querySelector(".space").style.top
+                for (var i = 0; i < 16; i++) {
+                    if (parseInt(box.children[i].style.left) == parseInt(x) + 200 && parseInt(box.children[i].style
+                            .top) == parseInt(y)) {
+                        box.children[i].style.left = x
+                        box.querySelector(".space").style.left = parseInt(x) + 200 + "px"
+                    }
+                }
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+
+    <style>
+        div,
+        body {
+            margin: 0;
+            height: 0;
+        }
+
+        #box {
+            width: 800px;
+            height: 800px;
+            background-color: burlywood;
+            position: relative;
+        }
+
+        #box div {
+            width: 200px;
+            height: 200px;
+            background: url(./头像\ \(11\).png) no-repeat;
+            position: absolute;
+
+        }
+    </style>
+    </head>
+
+    <body>
+        <div id="box"></div>
+    </body>
+
+</body>
+
+</html>

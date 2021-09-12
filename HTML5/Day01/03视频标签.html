@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        video {
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- controls 是否显示控件 -->
+    <!-- autoplay 自动播放 -->
+    <!-- loop 循环播放 -->
+    <!-- muted 静音播放 -->
+    <video src="./media/video.mp4" controls="controls" autoplay="autoplay" loop="loop" muted="muted"></video>
+
+    <video loop="loop" poster="./media/pic.jpg"> 
+        <source src="./media/video.mp4" type="video/mp4">
+        <source src="./media/video.ogg" type="video/ogg">
+            您的浏览器版本过低,不支持播放视频
+    </video>
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //switch注意事项
+
+        var num = 3;
+        switch (num) {
+            case 1:
+                console.log(1);
+                break;
+            case 3:
+                console.log(3);
+                break;
+            case '3':
+                console.log('"3"');
+                break;
+        }
+
+        // 1.在我们开发里面表达式我们经常写成变量
+        // 2.我们num里面的值和case里面的值向匹配的时候是 全等 必须值和类型一样
+        // 3.break 可以省略不写 break不写会造成break穿透
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

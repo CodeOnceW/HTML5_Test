@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ZH-cn">
+
+<head>
+    <!-- @Cond-Once -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轮播图效果</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- 先引入动画函数 -->
+    <script src="animate.js"></script>
+    <script src="indexJs.js"></script>
+
+</head>
+
+<body>
+
+    <!-- 焦点图盒子 -->
+    <div class="focus">
+        <!-- 左侧小箭头 -->
+        <a href="javascript:;" class="arrow-l">
+            <img src="images/arrow-left-bold.png" alt="">
+        </a>
+        <!-- 右侧小箭头 -->
+        <a href="javascript:;" class="arrow-r">
+            <img src="images/arrow-right-bold.png" alt="">
+        </a>
+
+        <!-- 图片列表 -->
+        <ul class="piclist">
+            <!-- 每个图片用li包裹 并添加超链接 -->
+            <li>
+                <a href="#">
+                    <img src="Images/pic01.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="Images/pic02.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="Images/pic03.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="Images/pic04.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="Images/pic05.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="Images/pic06.jpg" alt="">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="Images/pic07.jpg" alt="">
+                </a>
+            </li>
+        </ul>
+
+        <ol class="circle">
+            <!-- 根据图片数量自动添加对应数量的小圆点 -->
+            <!-- <li class="current"></li> -->
+        </ol>
+
+    </div>
+
+</body>
+
+</html>

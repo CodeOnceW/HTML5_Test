@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: #4a90ed;
+            /* CSS3 盒子模型 */
+            box-sizing: border-box;
+        }
+        
+        a {
+            /* 点击高亮我们需要清除, 设置为transparent完成透明 */
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        input {
+            /* 在移动端浏览器默认的外观再ios上加上这个属性才能给按钮和输入框自定义样式 */
+            -webkit-appearance: none;
+        }
+        
+        img,
+        a {
+            /* 禁用长按页面时弹出来菜单 */
+            -webkit-touch-callout: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>Hello</div>
+
+    <a href="#">Hello</a>
+
+    <input type="button" value="按钮">
+    <input type="text">
+
+    <img src="./images/dog.jpg" alt="">
+</body>
+
+</html>

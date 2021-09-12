@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>导航栏案例</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .banner {
+            width: 760px;
+            height: 150px;
+            margin: 0 auto;
+            background-color: pink;
+        }
+
+        .nav {
+            width: 760px;
+            height: 32px;
+            margin: 0 auto;
+            background-image: url(./images/nav_bg.jpg);
+        }
+
+        .nav ul li {
+            line-height: 32px;
+            float: left;
+        }
+
+        .nav ul li a {
+            display: inline-block;
+            text-align: center;
+            width: 80px;
+            line-height: 32px;
+            height: 32px;
+            /* background-color: red; */
+            color: #40510a;
+            text-decoration: none;
+            font-size: 12px;
+            background: url(./images/button1.jpg) no-repeat;
+        }
+
+        .nav ul li a:hover {
+            background-image: url(./images/button2.jpg);
+        }
+    </style>
+</head>
+<body>
+    <!-- 广告条 -->
+    <div class="banner">
+        <img src="./images/banner.jpg" alt="">
+    </div>
+    <!-- 导航栏 -->
+    <div class="nav">
+        <ul>
+            <li><a href="#">网站首页</a></li>
+            <li><a href="#">网站首页</a></li>
+            <li><a href="#">网站首页</a></li>
+            <li><a href="#">网站首页</a></li>
+            <li><a href="#">网站首页</a></li>
+            <li><a href="#">网站首页</a></li>
+        </ul>
+    </div>
+
+
+</body>
+</html>

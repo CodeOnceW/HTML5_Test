@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1. 用我们的布尔值参与的逻辑运算 ture && false == false
+        // 2. 123 && 456 是值或者是 表达式 参与逻辑运算
+        // 短路运算的原理：担忧多个表达式（值）时，左边的表达式尅确定结果时，就不在继续运算符右边的表达式的值
+        // 3. 逻辑与： 表达式1 && 表达式2 如果表达式1 结果为真 则返回表达式2 如果表达式1 为假 则返回表达式1
+        console.log(123 && 456); // 456
+        console.log(0 && 456); //0
+
+        console.log(0 && 1 + 2 && 456 * 5678); //0
+        console.log('' && 1 + 2 && 456 * 5678); //''
+        // 如果有空的 否定的为假 其余是真的 0 '' null undefined NaN
+
+        // 4.逻辑或短路运算 如果表达式1 结果为真 则返回表达式1 如果表达式1 结果为假 则返回表达式2
+
+        console.log(123 || 456); //123
+        console.log(123 || 456 || 389 + 123); //123
+        console.log(0 || 456 || 389 + 123); //456
+
+        // 逻辑中断很重要 他会影响我们程序的运行结果
+        var num = 0;
+        console.log(123 || num++);
+        console.log(num); //0
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

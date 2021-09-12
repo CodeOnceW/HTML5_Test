@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>导航栏</title>
+    <style>
+        .nav {
+            text-align: center;
+        }
+
+        .nav a {
+            display: inline-block;
+            width: 120px;
+            height: 50px;
+            /* background-color: #999; */
+            /* 行高等于容器高度,实现文字垂直居中 */
+            line-height: 50px;
+            /* 取消下划线 */
+            text-decoration: none;
+            color: #fff;
+            background: url(./images/bg.png) no-repeat;
+        }
+
+        /* 鼠标经过链接,背景图片更换 */
+        .nav a:hover{
+            background-image: url(./images/bgc.png);
+        }
+
+    </style>
+</head>
+<body>
+    
+    <div class="nav">
+        <a href="#">网站首页</a>
+        <a href="#">网页首页</a>
+        <a href="#">网页首页</a>
+        <a href="#">网页首页</a>
+        <a href="#">网页首页</a>
+        <a href="#">网页首页</a>
+    </div>
+
+</body>
+</html>

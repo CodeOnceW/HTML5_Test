@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div>div1</div>
+    <div>div2</div>
+    <div>div3</div>
+    <div>div4</div>
+    <div>div5</div>
+
+    <script>
+        // 扩展运算符 可以将数组拆分成以逗号分隔的参数序列
+        // 扩展运算符应用于数组合并 [...arr1, ...arr2, ...]
+        // 利用扩展运算符将伪数组转换为真正的数组
+
+        // let arr = [1, 2, 3];
+        // let arr = ["a", "b", "c"];
+        // // ..arr // 1 2 3
+
+        // console.log(...arr); //1 2 3
+        // console.log(1, 2, 3);
+
+        // 扩展运算符应用于数组合并
+        // let arr1 = [1, 2, 3];
+        // let arr2 = [4, 5, 6];
+        // let arr3 = [...arr1, ...arr2];
+        // console.log(arr3); //1, 2, 3, 4, 5, 6
+
+        // 合并数组的第二种方法
+        // let arr1 = [1, 2, 3];
+        // let arr2 = [4, 5, 6];
+        // arr1.push(...arr2)
+        // console.log(arr1); //1, 2, 3, 4, 5, 6
+
+        // 利用扩展运算符将伪数组转换为真正的数组
+        let divs = document.querySelectorAll('div');
+        console.log(divs);
+        let divArr = [...divs];
+        // divArr.push('divArr');
+        console.log(divArr);
+    </script>
+
+</body>
+
+</html>

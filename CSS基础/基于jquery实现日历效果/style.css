@@ -1,0 +1,36 @@
+#Calendar {
+    width: 200px;
+    padding-bottom: 5px;
+    box-shadow: 0 1px 3px #ccc;
+    border: 1px solid #EDEDED;
+}
+
+#Calendar table {
+    width: inherit;
+    text-align: center;
+    user-select: none;
+    font-family: "Comic Sans MS";
+    border-collapse: collapse;
+    border-spacing: 0px;
+}
+
+#Calendar table tr th {
+    background: #f8f8f8;
+    font-size: 12px;
+}
+
+#Calendar table tr:nth-child(2) {
+    background: #f8f8f8;
+}
+
+#Calendar table tr td {
+    font-size: 10px;
+}
+
+#Calendar table tr td.now-day {
+    color: red;
+}
+
+#Calendar table tr td.other-day {
+    color: lightgray;
+}

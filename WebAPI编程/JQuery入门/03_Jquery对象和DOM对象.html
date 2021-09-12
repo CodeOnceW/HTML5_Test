@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-36.js"></script>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: dodgerblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div></div>
+    <span></span>
+
+    <script>
+        // 1. DOM 对象：用原声JS获取过来的对就是DOM对象
+        var myDiv = document.querySelector('div'); // myDiv 是DOM对象
+        var mySpan = document.querySelector('span'); // myDiv 是DOM对象
+        console.dir(myDiv)
+
+        // 2. Jquer对象： 用Jquery方式获取过来的对象就是jquery对象 本质： 通过$把DOM元素进行包装
+        $('div'); // $('div') 是一个Jquery对象
+        $('span'); // $('span') 是一个Jquery对象
+        console.dir($('div'));
+        // jQuery 使用伪数组的形式存储对象
+
+        // 3. Jquery对象只能使用 Jquery 方法 DOM 对象则使用原生的 JavaScript 属性和方法
+        // myDiv.style.display = 'none';
+        // myDiv.hide(); // myDiv 是一个DOM对象 不能使用 Jquery里面的hide方法
+        // $('div').style.display = 'none'; // 这个 $('div') 是一个Jquery对象 不能使用原生的属性和方法
+    </script>
+
+</body>
+
+</html>

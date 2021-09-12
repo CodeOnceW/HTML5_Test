@@ -1,0 +1,9 @@
+{{ extend './common/layout.art' }}
+
+{{ block 'link' }}
+    <link rel="stylesheet" href="./main.css">
+{{ /block }}
+
+{{ block 'content' }}
+    <p> {{ msg }} </p>
+{{ /block }}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 字符串型可以是引号中的任意文本，其语法为 双引号 "" 和 单引号 ''
+        var str1 = 'Hello';
+        var str2 = "World";
+        // var str3 = hi;
+
+        // 因为HTML标签里面的属性使用的是双引号，JS这里我们推荐使用 单引号
+
+        // JS可以使用单引号嵌套双引号，或者用双引号嵌套单引号（外双内单， 外单内双 ）
+        // var sayhi = 'Hello World HTML 'AND' JavaScript'
+        var str3 = 'Hello World HTML "AND" JavaScript';
+        console.log(str3);
+        var str4 = "Hello World HTML 'AND' JavaScript";
+        console.log(str4);
+
+        // 转义字符都是反斜杠 \ 开头的 但是这些转义字符要写到引号里面
+        var str5 = "Hello HTML \n  AND JavaScript";
+        console.log(str5);
+
+        console.log("\n");
+        console.log("\\");
+        console.log("\'");
+        console.log("\"");
+        console.log("\t");
+        console.log("\b");
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1.数组(Array):就是一组数据的集合 存储在单个变量下的优雅方式
+
+        // JS 中创建数组的两种方式
+        // a.利用new创建数组
+        var arr = new Array(); // 创建了一个空的数组
+
+        // b.利用数组字面两创建数组 []
+        var arrs = []; // 创建了一个空的数组
+        var arr1 = [1, 2, 'Hello', true]; // 数组里面可以放任意数据类型， 元素之间用逗号分隔
+        // 4.我们数组里面的数据一定用逗号分隔
+        // 5.数组里面的数据 比如1， 2， 我们称为数组元素
+
+        console.log(arr1);
+
+        // 6.获取数组元素 格式 数组名[索引号] 数组索引从0开始
+        console.log(arr1[2]);
+        console.log(arr1[3]);
+
+        var arr2 = ['小白', '小黑', '大黄', '大白'];
+        console.log(arr2[0]);
+        console.log(arr2[1]);
+        console.log(arr2[2]);
+        console.log(arr2[3]);
+        console.log(arr2[4]); //因为没有这个数组元素，所以输出结果是undefined
+
+        var week = ['星期一', '星期二', '星期三', '星期四', '星期五', '星期六', '星期日', ];
+        //打印星期天
+        console.log(week[6]);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

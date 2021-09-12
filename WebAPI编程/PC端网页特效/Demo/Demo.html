@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="box">
+        <div class="box-hd">
+            <ol class="tit-sid">
+                <li>
+                    <span>1</span>
+                </li>
+                <li></li>
+                <li>
+                    <span>2</span>
+                </li>
+                <li></li>
+                <li>
+                    <span>3</span>
+                </li>
+                <li></li>
+                <li>
+                    <span>4</span>
+                </li>
+            </ol>
+        </div>
+
+        <div class="box-bd">
+            <form action="">
+                <div class="form">
+                    <ul>
+                        <li>
+                            <h1>天</h1>
+                        </li>
+                        <li>
+                            <h1>道</h1>
+                        </li>
+                        <li>
+                            <h1>酬</h1>
+                        </li>
+                        <li>
+                            <h1>勤</h1>
+                        </li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+
+        <div class="box-fd">
+            <div class="btn">
+                <button>下一步</button>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var form = document.querySelector('.form');
+        var btn = document.querySelector('button');
+        var num = 0;
+
+        btn.addEventListener('click', function() {
+            if (num >= 1160) {
+                console.log('到底了');
+                num = 0;
+            } else {
+                form.style.left = -num + 'px';
+                num += 290;
+            }
+
+        })
+    </script>
+
+</body>
+
+</html>

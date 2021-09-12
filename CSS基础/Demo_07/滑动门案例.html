@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>滑动门</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* 1. a 是设置 左侧 背景的(左门) */
+        a {
+        /* 因为我们是滑动门, 左右推拉 跟文字内容多少有关系 此时需要用文字撑开盒子 需要用到行内块  */
+        display: inline-block;
+        height: 33px;
+        background: url(./images/to.png) no-repeat; 
+        /* margin: 100px; */
+        color: #fff;
+        padding-left: 15px;
+        text-decoration: none;
+        line-height: 33px;
+        }
+
+        /* 2. span 是设置 右侧 背景的(右门) */
+        a span {
+            display: inline-block;
+            height: 33px;
+            /* 一定注意 span 需要背景图片 右对齐 */
+            background: url(./images/to.png) no-repeat right; 
+            padding-right: 15px;
+        }
+
+        /* 3. 因为整个导航栏都是 链接 所以 a 要包含 span */
+    </style>
+</head>
+<body>
+    <a href="#">
+        <span> 首页 </span>
+    </a>
+    <a href="#">
+        <span> 关于我们 </span>
+    </a>
+    <a href="#">
+        <span> About </span>
+    </a>
+</body>
+</html>

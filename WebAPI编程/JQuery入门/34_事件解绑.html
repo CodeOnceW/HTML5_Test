@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-36.js"></script>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: dodgerblue;
+        }
+    </style>
+
+    <script>
+        $(function() {
+            $("div").on({
+                click: function() {
+                    console.log("我点击了");
+                },
+                mouseover: function() {
+                    console.log("我鼠标经过了");
+                }
+            });
+
+            $("ul").on("click", "li", function() {
+                alert(11);
+            });
+
+            // 1.事件解绑 off 参数为空 解绑所有事件
+            // $("div").off(); // 这个是解绑了div上所有事件
+            $("div").off("click"); // 这个是解绑了div上的点击事件
+            $("ul").off("click", "li"); // 解绑事件委托
+
+            // 2.one() 只能触发事件一次
+            $("p").one("click", function() {
+                alert("我只能触发一次o");
+            });
+
+        })
+    </script>
+
+
+</head>
+
+<body>
+
+    <div></div>
+    <ul>
+        <li>我们都是好孩子</li>
+        <li>我们都是好孩子</li>
+        <li>我们都是好孩子</li>
+    </ul>
+    <p>我是屁</p>
+
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+            width: 80px;
+            height: 30px;
+            border: 1px solid #ccc;
+        }
+        
+        button {
+            cursor: pointer;
+        }
+        /* 属性选择器 */
+        /* 没有空格 */
+        /* 选择的是 既是button又有 disabled属性的元素 */
+        /* 属性选择器的权重要过于标签选择器 属性选择器的权重是10 */
+        /* 1.直接写属性 */
+        /* 2.属性等于值 */
+        /* 3.属性以某个值开头的 */
+        /* 4.属性以某个值结尾的 */
+        /* 5.属性以包含某个值的 */
+        
+        button[disabled] {
+            /* E[att] */
+            cursor: default;
+        }
+        
+        input[type="search"] {
+            /* E[att="val"] */
+            background-color: red;
+        }
+        
+        div[class^="icon"] {
+            /* E[att^="val"] */
+            background-color: green;
+        }
+        
+        div[class$="icon"] {
+            /* E[att$="val"] */
+            background-color: blue;
+        }
+        
+        div[class*="icon"] {
+            /* E[att*="val"] */
+            /* background-color: yellow; */
+        }
+    </style>
+</head>
+
+<body>
+
+    <button>按钮1</button>
+    <button>按钮2</button>
+    <!-- disabled 禁用按钮 -->
+    <button disabled="disabled">按钮3</button>
+    <button disabled="disabled">按钮4</button>
+
+    <input type="text" value="文本框">
+    <input type="text" value="文本框">
+    <input type="text" value="文本框">
+    <input type="search" value="搜索框">
+    <input type="search" value="搜索框">
+    <input type="search" value="搜索框">
+
+    <div class="icon1">图标1</div>
+    <div class="icon2">图标2</div>
+    <div class="icon3">图标3</div>
+    <div class="absicon">图标4</div>
+    <div class="absicon">图标5</div>
+
+
+
+</body>
+
+</html>

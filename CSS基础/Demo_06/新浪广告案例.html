@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            width: 1002px;
+            margin: 0 auto;
+            /* 防止导航栏压住内容 */
+            margin-top: 44px;
+        }
+        .ad-l {
+            position: fixed;
+            top: 150px;
+            left: 0;
+        }
+        .ad-r {
+            position: fixed;
+            top: 150px;
+            right: 0;
+        }
+        .top {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            text-align: center;
+            height: 44px;
+            /* background-color: #fcfcfc; */
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="top">
+        <img src="./images/top.png" alt="">
+    </div>
+
+    
+    <!-- 左右的固定定位 -->
+    <img src="./images/ad-l.png" alt="" class="ad-l">
+    <img src="./images/ad-r.png" alt="" class="ad-r">
+    <div class="box">
+        <img src="./images/box.png" alt="">
+    </div> 
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            background-color: green;
+            /* 1.translate 里面的参数可以用百分比 */
+            /* 2.如果参数是 % ，移动的举例是盒子的宽度或高度 */
+            /* transform: translateX(50%); */
+            /* transform: translate(-50%, -50%); */
+        }
+        
+        a {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            /* 盒子往上走自身高度的一半， 往左走自身高度的一半 */
+            transform: translate(-50%, -50%);
+            /* margin-top: -50px;
+            margin-left: -50px; */
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        
+        span {
+            transform: translate( 100px 200px);
+            /* translate 对于行内元素是无效的 */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <a href="#"></a>
+    </div>
+    <span>999</span>
+
+</body>
+
+</html>
