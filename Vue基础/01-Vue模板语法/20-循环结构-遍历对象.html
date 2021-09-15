@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <div id="app">
+        <!-- 提供的标签 -->
+        <!-- 使用for遍历对象 -->
+        <div v-for='(v, k, i) in obj'>
+            {{v + '---' + k + '---' + i}}
+        </div>
+        ------------------------
+        <!-- for可以和if结合使用 -->
+        <div v-if='v>=18' v-for='(v, k, i) in obj'>
+            {{v + '---' + k + '---' + i}}
+        </div>
+    </div>
+
+
+    <!-- 引入Vue库文件 -->
+    <script src="js/vue.js"></script>
+
+    <script>
+        // 使用原生js遍历对象
+        var obj = {
+            uname: 'lisi',
+            age: 19,
+            gender: 'male'
+        }
+
+        for (var key in obj) {
+            console.log(key, obj[key]);
+        }
+
+
+
+        // 循环结构
+
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                obj: {
+                    uname: 'lisi',
+                    age: 19,
+                    gender: 'male'
+                }
+            },
+            methods: {
+
+            }
+        });
+    </script>
+
+</body>
+
+</html>

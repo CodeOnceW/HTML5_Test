@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <div id="app">
+        <!-- 提供的标签 -->
+        <a v-bind:href="url">商城</a>
+        <a :href="url">商城</a>
+        <button v-on:click='handle'>切换</button>
+    </div>
+
+
+    <!-- 引入Vue库文件 -->
+    <script src="js/vue.js"></script>
+
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                url: 'http://www.jd.com'
+            },
+            methods: {
+                handle: function() {
+                    // 修改url地址
+                    this.url = 'http://www.taobao.com';
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

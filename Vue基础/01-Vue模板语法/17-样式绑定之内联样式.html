@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .active {
+            border: 1px solid red;
+            width: 100px;
+            height: 100px;
+        }
+        
+        .error {
+            background-color: orange;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="app">
+        <!-- 提供的标签 -->
+        <div :style='{border: borderStyle, width: widthStyle, height: heightStyle}'></div>
+        <div :style='objStyles'></div>
+        <div :style='[objStyles, overrideStyles]'></div>
+        <button @click='handle'>切换</button>
+    </div>
+
+
+    <!-- 引入Vue库文件 -->
+    <script src="js/vue.js"></script>
+
+    <script>
+        var vm = new Vue({
+            el: '#app ',
+            data: {
+                borderStyle: '1px solid blue ',
+                widthStyle: '100px ',
+                heightStyle: '200px ',
+                objStyles: {
+                    border: '1px solid green ',
+                    width: '200px ',
+                    height: '100px '
+                },
+                overrideStyles: {
+                    border: '5px solid orange',
+                    backgroundColor: 'blue'
+                }
+            },
+            methods: {
+                handle: function() {
+                    this.heightStyle = '100px '
+                    this.objStyles.width = '100px'
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

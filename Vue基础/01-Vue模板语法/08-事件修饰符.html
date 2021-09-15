@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <div id="app">
+        <!-- 提供的标签 -->
+        <div>{{num}}</div>
+        <div v-on:click='handle0'>
+            <!-- stop 阻止冒泡 -->
+            <button v-on:click.stop='handle1'>点击按钮</button>
+        </div>
+        <div>
+            <!-- prevent 阻止默认行为 -->
+            <a href="http://www.bai.com" v-on:click.prevent='handle2'>百度</a>
+        </div>
+    </div>
+
+
+    <!-- 引入Vue库文件 -->
+    <script src="js/vue.js"></script>
+
+    <script>
+        // 事件绑定-事件修饰符
+
+
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                num: 0
+            },
+            methods: {
+                handle0: function() {
+                    this.num++;
+                },
+                handle1: function(event) {
+                    // 阻止冒泡
+                    // event.stopPropagation();
+                },
+                handle2: function(event) {
+                    // 阻止默认行为
+                    // event.preventDefault();
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

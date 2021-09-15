@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <div id="app">
+        <!-- 提供的标签 -->
+        <div>{{num}}</div>
+        <div>
+            <button v-on:click='num++'>点击+1</button>
+            <button @click='num--'>点击-1</button>
+            <button @click='add'>点击+2</button>
+            <button @click='reduce()'>点击+2</button>
+        </div>
+    </div>
+
+
+    <!-- 引入Vue库文件 -->
+    <script src="js/vue.js"></script>
+
+    <script>
+        // 事件绑定
+
+
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                num: 0
+            },
+            methods: {
+                add: function() {
+                    // 这里的this时Vue的实例对象vm
+                    console.log(this === vm);
+                    this.num += 2;
+                },
+                reduce: function() {
+                    this.num -= 2;
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

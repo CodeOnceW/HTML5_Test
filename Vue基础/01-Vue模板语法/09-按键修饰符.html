@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <div id="app">
+        <!-- 提供的标签 -->
+        <form action="">
+            <div>
+                用户名:
+                <input type="text" v-model='uname' v-on:keyup.delete='clearConten'>
+            </div>
+            <div>
+                密码:
+                <input type="text" v-model='pwd' v-on:keyup.enter='handleSubmit'>
+            </div>
+            <div>
+                <input type="button" value="提交" v-on:click='handleSubmit'>
+            </div>
+        </form>
+    </div>
+
+
+    <!-- 引入Vue库文件 -->
+    <script src="js/vue.js"></script>
+
+    <script>
+        // 事件绑定-按键修饰符
+
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                uname: '',
+                pwd: ''
+            },
+            methods: {
+                // 打印用户输入的用户名和密码
+                handleSubmit: function() {
+                    // 按enter键时输出用户名密码
+                    console.log(this.uname, this.pwd);
+                },
+                // 清空用户名框内输入的内容
+                clearConten: function() {
+                    // 按delete键的时候清空用户名
+                    this.uname = '';
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

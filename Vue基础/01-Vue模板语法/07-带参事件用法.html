@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <div id="app">
+        <!-- 提供的标签 -->
+        <div>{{num}}</div>
+        <div>
+            <button @click='handle1'>点击Btn + 1</button>
+            <button @click='handle2(123, 456, $event)'>点击Btn - 1</button>
+        </div>
+    </div>
+
+
+    <!-- 引入Vue库文件 -->
+    <script src="js/vue.js"></script>
+
+    <script>
+        // 事件绑定 -  参数传递
+        // 1. 如果事件直接绑定函数名称 那么默认会传递事件对象作为事件函数的第一个参数
+        // 2.如果事件绑定函数调用，那么事件对象必须作为最后一个参数进行显式传递 并且事件对象的名称必须时 $event
+
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                num: 0
+            },
+            methods: {
+                handle1: function(event) {
+                    console.log(event.target.innerHTML);
+                    this.num++;
+                },
+                handle2: function(e, e1, event) {
+                    // 打印参数
+                    console.log(e, e1);
+                    // 打印事件对象
+                    // console.log(event.target.tagName); // 对象类型
+                    console.log(event.target.innerHTML); // 对象内容
+                    this.num--;
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <div id="app">
+        <!-- 提供的标签 -->
+        <div v-if='score >= 90'>优秀</div>
+        <div v-else-if='score < 90 && score >= 80'>良好</div>
+        <div v-else-if='score < 80 && score >= 60'>一般</div>
+        <div v-else>比较差</div>
+
+        <div v-show='flag'>测试v-show</div>
+        <button @click='handle'>点击show</button>
+
+    </div>
+
+
+    <!-- 引入Vue库文件 -->
+    <script src="js/vue.js"></script>
+
+    <script>
+        // 分支结构
+
+        // v-show 的原理: 控制元素样式是否显示 display: none / block
+
+        // v-if 与 v-show 的区别：
+        // v-if 控制元素是否渲染到页面
+        // v-show 控制元素是否显示（已经渲染到页面）
+
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                score: 99,
+                flag: true
+            },
+            methods: {
+                handle: function() {
+                    this.flag = !this.flag
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

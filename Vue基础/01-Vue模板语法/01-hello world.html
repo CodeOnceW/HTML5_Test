@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+    <div id="app">
+        <!-- 提供的标签 -->
+        <div>{{msg}}</div>
+        <div>{{1 + 2}}</div>
+        <div>{{msg + '--------' + 123}}</div>
+    </div>
+
+
+    <!-- 引入Vue库文件 -->
+    <script src="js/vue.js"></script>
+
+    <script>
+        // Vue的基本使用
+        // 1.需要提供标签用于填充数据
+        // 2.引入Vue库文件
+        // 3.可以使用Vue的语法做功能了
+        // 4.把Vue提供的数据填充到标签里面
+
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                msg: 'Hello Vue'
+            }
+        });
+    </script>
+
+</body>
+
+</html>
