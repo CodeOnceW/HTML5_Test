@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <div>{{msg}}</div>
+        <!-- 使用原生js实现字符反转 -->
+        <div>{{msg.split('').reverse().join('')}}</div>
+
+        <!-- 自定义计算属性 -->
+        <div>{{reverseString}}</div>
+    </div>
+
+    <script src="js/vue.js"></script>
+
+    <script>
+        // 计算属性
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                msg: 'Hello World'
+            },
+            computed: {
+                reverseString: function() {
+                    return this.msg.split('').reverse().join('')
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

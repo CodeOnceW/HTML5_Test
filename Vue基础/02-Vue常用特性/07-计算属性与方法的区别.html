@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <div>{{msg}}</div>
+        <!-- 使用原生js实现字符反转 -->
+        <div>{{msg.split('').reverse().join('')}}</div>
+
+        <!-- 自定义计算属性 -->
+        <div>{{reverseString}}</div>
+        <div>{{reverseString}}</div>
+
+        <!-- 使用方法实现字符串反转 -->
+        <div>{{reverseMessage()}}</div>
+        <div>{{reverseMessage()}}</div>
+    </div>
+
+    <script src="js/vue.js"></script>
+
+    <script>
+        // 计算属性
+        // 计算属性是基于他们的依赖进行缓存的
+        // 方法不存在缓存
+
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                msg: 'Hello World',
+                num: 100
+            },
+            methods: {
+                reverseMessage: function() {
+                    console.log('methods');
+                    return this.msg.split('').reverse().join('')
+                }
+            },
+            computed: {
+                reverseString: function() {
+                    console.log('computed');
+                    // return this.msg.split('').reverse().join('')
+                    var total = 0;
+                    for (var i = 0; i <= this.num; i++) {
+                        total += i;
+                    }
+                    return total;
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>
