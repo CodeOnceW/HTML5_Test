@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <hello-world></hello-world>
+        <hello-vue></hello-vue>
+        <hello-html></hello-html>
+        <test-com></test-com>
+    </div>
+
+    <script src="js/vue.js"></script>
+    <script>
+        // 局部组件注册
+        // 局部组件只能在注册它的父组件中使用
+
+        Vue.component('test-com', {
+            template: '<div>Test</div>'
+        })
+
+        // ----------------------------
+        // 定义三个子组件
+        var HelloWorld = {
+            data: function() {
+                return {
+                    msg: 'Hello World'
+                }
+            },
+            template: '<div>{{msg}}</div>'
+        };
+
+        var HelloVue = {
+            data: function() {
+                return {
+                    msg: 'Hello Vue'
+                }
+            },
+            template: '<div>{{msg}}</div>'
+        };
+
+        var HelloHTML = {
+            data: function() {
+                return {
+                    msg: 'Hello HTML'
+                }
+            },
+            template: '<div>{{msg}}</div>'
+        };
+        // ----------------------------
+
+
+        var vm = new Vue({
+            el: '#app',
+            data: {},
+            components: {
+                'hello-world': HelloWorld,
+                'hello-vue': HelloVue,
+                'hello-html': HelloHTML
+            }
+        });
+    </script>
+
+</body>
+
+</html>

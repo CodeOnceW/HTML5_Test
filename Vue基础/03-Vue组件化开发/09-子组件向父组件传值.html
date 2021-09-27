@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="app">
+        <div :style='{fontSize: fontSize + "px"}'>{{pmsg}}</div>
+        <menu-item :parr='parr' @enlarge-text='handle'></menu-item>
+        <!-- :pnum 去掉冒号传入的值是字符串 加上冒号传入的值是数值 -->
+    </div>
+
+    <script src="js/vue.js"></script>
+
+    <script>
+        // 子组件向父组件传值 - 基本用法
+        // props 传递数据原则：单向数据流
+        // 子组件通过自定义事件向父组件传递信息
+
+        Vue.component('menu-item', {
+            props: ['parr'],
+            template: `
+                <div>
+                    <ul>
+                        <li :key='index' v-for='(item, index) in parr'>{{item}}</li>
+                    </ul>
+                    <button @click='parr.push("lemon")'>点击</button>
+                    <button @click='$emit("enlarge-text")'>扩大父组件中字体大小</button>
+                </div>
+            `
+        });
+
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                pmsg: '父组件中的内容',
+                parr: ['apple', 'orange', 'banana'],
+                fontSize: 10
+            },
+            methods: {
+                handle: function() {
+                    // 扩大字体大小
+                    this.fontSize += 5;
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>
