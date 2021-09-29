@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // Promise 基本使用
+
+        // console.log(typeof Promise);
+        // console.dir(Promise);
+
+        var p = new Promise(function(resolve, reject) {
+            // 实现的异步任务
+            setTimeout(function() {
+                var flag = true;
+                if (flag) {
+                    // 正常情况
+                    resolve('Hello');
+                } else {
+                    // 异常情况
+                    reject('Error');
+                }
+            }, 100);
+        });
+
+        p.then(function(data) {
+            // 正常信息
+            console.log(data);
+        }, function(info) {
+            // 异常信息
+            console.log(info);
+        })
+    </script>
+
+</body>
+
+</html>

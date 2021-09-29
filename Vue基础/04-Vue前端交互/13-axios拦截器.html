@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script src="js/axios.js"></script>
+
+    <script>
+        // axios 拦截器
+
+        // 添加一个请求拦截器
+        axios.interceptors.request.use(function(config) {
+            // 在请求发出之前进行一些信息设置
+            console.log(config.url);
+            config.headers.mytoken = 'hello';
+            return config;
+        }, function(err) {
+            //处理相应的错误信息
+            console.log(err);
+        })
+
+        axios.interceptors.response.use(function(result) {
+            var data = result.data;
+            console.log(result);
+            return data;
+        }, function(err) {
+            //处理相应的错误信息
+            console.log(err);
+        })
+
+        axios.get('http://localhost:3000/adata')
+            .then(function(data) {
+                console.log(data);
+            })
+    </script>
+
+</body>
+
+</html>
